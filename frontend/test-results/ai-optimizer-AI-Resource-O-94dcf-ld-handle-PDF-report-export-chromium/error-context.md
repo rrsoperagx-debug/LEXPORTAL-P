@@ -1,0 +1,188 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications alt+T"
+  - main [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - generic [ref=e10]:
+          - img [ref=e12]
+          - generic [ref=e16]:
+            - generic [ref=e17]: LexPortal
+            - generic [ref=e18]: Enterprise Admin
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: Menu Główne
+            - list [ref=e23]:
+              - listitem [ref=e24]:
+                - button "Dashboard" [ref=e25]:
+                  - img [ref=e26]
+                  - generic [ref=e31]: Dashboard
+              - listitem [ref=e32]:
+                - button "Klienci" [ref=e33]:
+                  - img [ref=e34]
+                  - generic [ref=e39]: Klienci
+              - listitem [ref=e40]:
+                - button "Sprawy i Pisma 12" [ref=e41]:
+                  - img [ref=e42]
+                  - generic [ref=e45]: Sprawy i Pisma
+                  - generic [ref=e46]: "12"
+              - listitem [ref=e47]:
+                - button "Finanse" [ref=e48]:
+                  - img [ref=e49]
+                  - generic [ref=e51]: Finanse
+              - listitem [ref=e52]:
+                - button "Analizy Sprzedaży" [ref=e53]:
+                  - img [ref=e54]
+                  - generic [ref=e57]: Analizy Sprzedaży
+              - listitem [ref=e58]:
+                - button "Szablony prawne" [ref=e59]:
+                  - img [ref=e60]
+                  - generic [ref=e63]: Szablony prawne
+              - listitem [ref=e64]:
+                - button "Poczta 5" [ref=e65]:
+                  - img [ref=e66]
+                  - generic [ref=e69]: Poczta
+                  - generic [ref=e70]: "5"
+              - listitem [ref=e71]:
+                - button "Czat" [ref=e72]:
+                  - img [ref=e73]
+                  - generic [ref=e75]: Czat
+          - generic [ref=e76]:
+            - generic [ref=e77]: Administracja
+            - list [ref=e79]:
+              - listitem [ref=e80]:
+                - button "Logi Systemowe" [ref=e81]:
+                  - img [ref=e82]
+                  - generic [ref=e86]: Logi Systemowe
+              - listitem [ref=e87]:
+                - button "Konfiguracja" [ref=e88]:
+                  - img [ref=e89]
+                  - generic [ref=e92]: Konfiguracja
+              - listitem [ref=e93]:
+                - button "Bezpieczeństwo" [ref=e94]:
+                  - img [ref=e95]
+                  - generic [ref=e98]: Bezpieczeństwo
+              - listitem [ref=e99]:
+                - button "Optymalizator AI" [ref=e100]:
+                  - img [ref=e101]
+                  - generic [ref=e103]: Optymalizator AI
+        - list [ref=e105]:
+          - listitem [ref=e106]:
+            - button "Wyloguj się" [ref=e107]:
+              - img [ref=e108]
+              - generic [ref=e111]: Wyloguj się
+        - button "Toggle Sidebar" [ref=e112]
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - button "Toggle Sidebar" [ref=e116]:
+              - img
+              - generic [ref=e117]: Toggle Sidebar
+            - generic [ref=e118]:
+              - img [ref=e119]
+              - searchbox "Szukaj klientów, spraw, dokumentów..." [ref=e122]
+          - generic [ref=e123]:
+            - button [ref=e124]:
+              - img
+            - button [ref=e126]:
+              - img
+            - button "Nowe Zadanie" [ref=e127]:
+              - img
+              - generic [ref=e128]: Nowe Zadanie
+        - main [ref=e129]:
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - heading "Cześć, Admin 👋" [level=1] [ref=e132]
+              - paragraph [ref=e133]: Witaj ponownie w panelu zarządzania LexPortal Enterprise. Masz dziś 3 nowe sprawy do przejrzenia.
+            - generic [ref=e135]:
+              - generic [ref=e136]:
+                - generic [ref=e137]:
+                  - heading "AI Resource Optimizer" [level=2] [ref=e138]
+                  - paragraph [ref=e139]: Monitorowanie kosztów i wydajności modeli LLM (Lexportal v2.0)
+                - generic [ref=e140]:
+                  - button "PDF Report" [active] [ref=e141]:
+                    - img [ref=e142]
+                    - text: PDF Report
+                  - button "Eksportuj do Google Drive" [ref=e145]:
+                    - img [ref=e146]
+                    - text: Google Drive
+                  - generic [ref=e150]: Orchestrator v2.0 Online
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - generic [ref=e153]:
+                    - img [ref=e155]
+                    - generic [ref=e158]:
+                      - paragraph [ref=e159]: Oszczędności
+                      - heading "$125.45678" [level=3] [ref=e160]
+                  - paragraph [ref=e161]: vs. stała stawka Tier 3
+                - generic [ref=e162]:
+                  - generic [ref=e163]:
+                    - img [ref=e165]
+                    - generic [ref=e168]:
+                      - paragraph [ref=e169]: Szybkość
+                      - heading "246 ms" [level=3] [ref=e170]
+                  - paragraph [ref=e171]: Średni czas odpowiedzi
+                - generic [ref=e172]:
+                  - generic [ref=e173]:
+                    - img [ref=e175]
+                    - generic [ref=e177]:
+                      - paragraph [ref=e178]: Zapytania
+                      - heading "1,250" [level=3] [ref=e179]
+                  - paragraph [ref=e180]: Ostatnie 30 dni
+                - generic [ref=e181]:
+                  - generic [ref=e182]:
+                    - img [ref=e184]
+                    - generic [ref=e186]:
+                      - paragraph [ref=e187]: Failover
+                      - heading "3" [level=3] [ref=e188]
+                  - paragraph [ref=e189]: Automatyczne przełączenia
+              - generic [ref=e190]:
+                - generic [ref=e191]:
+                  - heading "Model Usage Distribution" [level=3] [ref=e192]
+                  - generic [ref=e193]:
+                    - generic [ref=e194]:
+                      - generic [ref=e195]:
+                        - generic [ref=e196]:
+                          - img [ref=e197]
+                          - text: Gemini
+                        - generic [ref=e199]: 80.0%
+                      - generic [ref=e202]:
+                        - generic [ref=e203]: Avg Latency
+                        - generic [ref=e204]: 120 ms
+                    - generic [ref=e205]:
+                      - generic [ref=e206]:
+                        - generic [ref=e207]:
+                          - img [ref=e208]
+                          - text: Cerebras
+                        - generic [ref=e212]: 20.0%
+                      - generic [ref=e215]:
+                        - generic [ref=e216]: Avg Latency
+                        - generic [ref=e217]: 30 ms
+                  - paragraph [ref=e219]:
+                    - strong [ref=e220]: "Zoptymalizowano przez AI:"
+                    - text: Tier 1 (Gemini) obsłużył większość zapytań, redukując koszty operacyjne do minimum przy zachowaniu wysokiej wydajności.
+                - generic [ref=e221]:
+                  - heading "Recent Ingestion Audit Log (v2.0)" [level=3] [ref=e222]
+                  - table [ref=e224]:
+                    - rowgroup [ref=e225]:
+                      - row "Dokument Zużycie Model Provider Czas (ms) Koszt" [ref=e226]:
+                        - columnheader "Dokument" [ref=e227]
+                        - columnheader "Zużycie" [ref=e228]
+                        - columnheader "Model" [ref=e229]
+                        - columnheader "Provider" [ref=e230]
+                        - columnheader "Czas (ms)" [ref=e231]
+                        - columnheader "Koszt" [ref=e232]
+                    - rowgroup [ref=e233]:
+                      - row "Test Doc 1 1500 tk. gemini-1.5-flash Gemini 120 $0.00022" [ref=e234]:
+                        - cell "Test Doc 1" [ref=e235]
+                        - cell "1500 tk." [ref=e236]
+                        - cell "gemini-1.5-flash" [ref=e237]
+                        - cell "Gemini" [ref=e238]
+                        - cell "120" [ref=e239]
+                        - cell "$0.00022" [ref=e240]
+                  - button "Pobierz pełną historię audit log" [ref=e241]:
+                    - img [ref=e242]
+                    - text: Pobierz pełną historię audit log
+```

@@ -1,0 +1,207 @@
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend[39m
+
+[90mstdout[2m | tests/ai_benchmark/legal_consistency.test.ts[2m > [22m[2mAI Benchmark - Adherence to Lexportal Rules[2m > [22m[2mAI should include RODO clause and Penalty Cap in NDA templates
+[22m[39m--- TEST 1 RESPONSE ---
+**Zastrzeżenie prawne:** Niniejszy dokument jest wzorcem umowy wygenerowanym przez system LexPortal i ma charakter wyłącznie informacyjny. Nie stanowi on porady prawnej ani opinii prawnej. AI nie jest prawnikiem. Każda umowa powinna zostać zweryfikowana przez wykwalifikowanego radcę prawnego przed jej podpisaniem.
+
+---
+
+### UMOWA O ZACHOWANIU POUFNOŚCI (NDA) - WZÓR B2B
+
+**Zawarta w dniu [DATA] w [MIEJSCOWOŚĆ] pomiędzy:**
+
+**[NAZWA FIRMY]** z siedzibą w [MIEJSCOWOŚĆ], NIP: [NUMER], reprezentowaną przez [IMIĘ I NAZWISKO], zwaną dalej **Zleceniodawcą** (lub **Zamawiającym**),
+
+a
+
+**[IMIĘ I NAZWISKO / FIRMA PROGRAMISTY]** z siedzibą w [MIEJSCOWOŚĆ], NIP: [NUMER] (lub PESEL: [NUMER] w przypadku osoby fizycznej), zwanym dalej **Zleceniobiorcą** (lub **Wykonawcą**).
+
+#### §1. PRZEDMIOT UMOWY
+1. Zleceniobiorca zobowiązuje się do zachowania w ścisłej tajemnicy wszelkich Informacji Poufnych uzyskanych od Zleceniodawcy w związku z realizacją usług programistycznych.
+2. Informacje Poufne obejmują w szczególności: kod źródłowy, architekturę systemów, dane dostępowe (klucze API, hasła), bazy danych klientów, tajemnice handlowe oraz strategie biznesowe Zamawiającego.
+
+#### §2. KARY UMOWNE I LIMIT ODPOWIEDZIALNOŚCI (PENALTY CAP)
+1. Za każdy przypadek naruszenia obowiązku poufności Zleceniobiorca zapłaci Zleceniodawcy karę umowną w wysokości [KWOTA, np. 10.000,00] PLN.
+2. **Penalty Cap:** Łączna odpowiedzialność Zleceniobiorca z tytułu kar umownych oraz odszkodowań wynikających z niniejszej Umowy jest ograniczona do kwoty **[KWOTA LIMITU, np. 50.000,00] PLN**. Ograniczenie to nie dotyczy szkód wyrządzonych z winy umyślnej.
+
+#### §3. KLAUZULA RODO
+1. Administratorem danych osobowych stron jest odpowiednio Zleceniodawca oraz Zleceniobiorca.
+2. Dane przetwarzane są w celu wykonania niniejszej Umowy (Art. 6 ust. 1 lit. b RODO) oraz w celu wypełnienia obowiązków prawnych (Art. 6 ust. 1 lit. c RODO).
+3. Każda ze stron ma prawo dostępu do treści swoich danych, ich poprawiania, żądania ich usunięcia oraz ograniczenia przetwarzania. Dane będą przechowywane przez okres 5 lat od wygaśnięcia zobowiązań wynikających z umowy.
+
+---
+
+### Komponent React: Formularz Danych do NDA (LexPortal UI)
+
+Poniższy komponent służy do wprowadzania danych programisty z rygorystyczną walidacją NIP/PESEL.
+
+```tsx
+import React, { useState } from 'react';
+
+interface NDAData {
+  companyName: string;
+  nip: string;
+  pesel: string;
+  isCompany: boolean;
+}
+
+const NDAGenerator: React.FC = () => {
+  const [data, setData] = useState<NDAData>({
+    companyName: '',
+    nip: '',
+    pesel: '',
+    isCompany: true,
+  });
+
+  const [errors, setErrors] = useState<{ nip?: string; pesel?: string }>({});
+
+  // Walidacja Regex zgodna ze standardem LexPortal
+  const validate = (field: string, value: string) => {
+    if (field === 'nip') {
+      const nipRegex = /^\d{10}$/;
+      setErrors(prev => ({
+        ...prev,
+        nip: nipRegex.test(value) ? undefined : 'NIP musi składać się z 10 cyfr.'
+      }));
+    }
+    if (field === 'pesel') {
+      const peselRegex = /^\d{11}$/;
+      setErrors(prev => ({
+        ...prev,
+        pesel: peselRegex.test(value) ? undefined : 'PESEL musi składać się z 11 cyfr.'
+      }));
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+    validate(name, value);
+  };
+
+  return (
+    <div className="p-8 max-w-2xl mx-auto bg-slate-50 rounded-xl shadow-lg border border-slate-200">
+      <h2 className="text-xl font-bold text-indigo-900 mb-6 italic underline">Generator Danych Zleceniobiorcy (NDA)</h2>
+      
+      <div className="space-y-4">
+        <div>
+          <label className="block text-sm font-bold text-slate-700">Nazwa Wykonawcy / Programisty</label>
+          <input
+            type="text"
+            name="companyName"
+            className="w-full p-2 border border-slate-300 rounded focus:ring-2 focus:ring-indigo-500 outline-none"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-bold text-slate-700">NIP (Zleceniobiorca B2B)</label>
+            <input
+              type="text"
+              name="nip"
+              className={`w-full p-2 border rounded outline-none transition-all ${errors.nip ? 'border-red-500 bg-red-50' : 'border-slate-300 focus:ring-2 focus:ring-indigo-500'}`}
+              onChange={handleChange}
+              placeholder="10 cyfr"
+            />
+            {errors.nip && <p className="text-red-500 text-[10px] mt-1 font-semibold italic">{errors.nip}</p>}
+          </div>
+          <div>
+            <label className="block text-sm font-bold text-slate-700">PESEL (Osoba fizyczna)</label>
+            <input
+              type="text"
+              name="pesel"
+              className={`w-full p-2 border rounded outline-none transition-all ${errors.pesel ? 'border-red-500 bg-red-50' : 'border-slate-300 focus:ring-2 focus:ring-indigo-500'}`}
+              onChange={handleChange}
+              placeholder="11 cyfr"
+            />
+            {errors.pesel && <p className="text-red-500 text-[10px] mt-1 font-semibold italic">{errors.pesel}</p>}
+          </div>
+        </div>
+
+        {/* Penalty Cap Info Section */}
+        <div className="mt-6 p-4 bg-amber-100 border-l-4 border-amber-500 rounded text-xs text-amber-900">
+          <p className="font-bold uppercase mb-1 underline text-[10px]">Pouczenie o limicie odpowiedzialności (Penalty Cap):</p>
+          Zgodnie z polityką LexPortal, niniejszy wzór zawiera limit odpowiedzialności Wykonawcy. Standardowa kwota 
+          została ustawiona na 50.000,00 PLN, aby zminimalizować ryzyko finansowe Zleceniobiorcy przy zachowaniu interesu Zleceniodawcy.
+        </div>
+
+        {/* GDPR Section */}
+        <div className="mt-4 p-4 bg-blue-100 border-l-4 border-blue-500 rounded text-[10px] text-blue-900 leading-snug italic">
+          <p className="font-bold uppercase mb-1">Nota RODO:</p>
+          Administratorem Twoich danych osobowych jest Zleceniodawca (Zamawiający). Masz prawo do wglądu, 
+          sprostowania oraz żądania usunięcia danych po zakończeniu okresu przedawnienia roszczeń z umowy NDA.
+        </div>
+
+        <button className="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 shadow-md transform active:scale-95 transition-all uppercase tracking-widest text-sm">
+          Przygotuj Szkic NDA
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default NDAGenerator;
+```
+
+### Backend (FastAPI): Endpoint do usuwania nieaktualnych wzorów NDA
+
+Operacja `DELETE` jest zastrzeżona wyłącznie dla Superużytkownika systemu LexPortal.
+
+```python
+from fastapi import FastAPI, Depends, HTTPException, status
+# from app.auth import get_current_active_superuser
+
+app = FastAPI()
+
+@app.delete(
+    "/api/v1/contracts/nda/{nda_id}",
+    status_code=status.HTTP_204_NO_CONTENT,
+    summary="Usuwanie wzoru NDA przez Wykonawcę (Superużytkownika)"
+)
+async def delete_nda_template(
+    nda_id: int,
+    # WYMÓG BEZPIECZEŃSTWA: Tylko Superuser LexPortal
+    current_user: dict = Depends(get_current_active_superuser)
+):
+    """
+    Trwale usuwa wzór umowy NDA z bazy danych Zleceniodawcy. 
+    Wymaga uprawnień administracyjnych Wykonawcy (Superuser).
+    """
+    # Logika usuwania z bazy danych
+    # audit_log(user=current_user, action="DELETE_NDA", target_id=nda_id)
+    return None
+```
+
+### Podsumowanie:
+1.  **Terminologia:** Użyto Zleceniodawca/Zleceniobiorca oraz Zamawiający/Wykonawca.
+2.  **Penalty Cap:** Wprowadzono sztywny limit odpowiedzialności w treści umowy oraz w pouczeniu w UI.
+3.  **RODO:** Dodano pełną klauzulę informacyjną w tekście umowy oraz w komponencie React.
+4.  **Technologia:** React, TypeScript, Tailwind CSS oraz FastAPI z zabezpieczonym endpointem.
+5.  **Walidacja:** NIP i PESEL walidowane za pomocą Regex.
+-----------------------
+
+[90mstdout[2m | tests/ai_benchmark/legal_consistency.test.ts[2m > [22m[2mAI Benchmark - Adherence to Lexportal Rules[2m > [22m[2mAI should suggest RBAC middleware for sensitive endpoints
+[22m[39m--- TEST 3 EVALUATION ---
+{
+  "score": 90,
+  "missing_elements": [
+    "Brak wyraźnego importu zależności get_current_active_superuser w kodzie FastAPI",
+    "Brak implementacji logowania operacji w Audit Log"
+  ],
+  "is_tech_compliant": true,
+  "legal_risk": "low",
+  "comment": "Kod spełnia większość wymagań, ale brakuje kilku istotnych elementów, takich jak import zależności i implementacja logowania operacji."
+}
+
+ [32m✓[39m tests/ai_benchmark/legal_consistency.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 53054[2mms[22m[39m
+     [33m[2m✓[22m[39m AI should include RODO clause and Penalty Cap in NDA templates [33m 18435[2mms[22m[39m
+     [33m[2m✓[22m[39m AI should generate React components using Tailwind and TypeScript [33m 18745[2mms[22m[39m
+     [33m[2m✓[22m[39m AI should suggest RBAC middleware for sensitive endpoints [33m 15872[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m   Start at [22m 07:52:03
+[2m   Duration [22m 53.18s[2m (transform 35ms, setup 0ms, import 45ms, tests 53.05s, environment 0ms)[22m
+

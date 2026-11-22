@@ -1,0 +1,45 @@
+# Ignore the virtual environment directory
+.venv/
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore frontend node modules
+frontend/node_modules
+
+# Ignore backend pytest cache
+backend/.pytest_cache
+
+# Ignore backend virtual environment
+backend/venv/
+
+# Ignore git
+.git/
+
+# Ignore vscode
+.vscode/
+
+# Ignore .env
+.env
+deploy/.env.prod
+
+# Antigravity rules 
+antigravity_rules.yaml
+
+# Ignore docs
+_docs/
+
+# Ignore Github
+.github/
+
+# Ignore frontend node_modules
+frontend/node_modules
+
+# Ignore .venv
+.venv   
+
+# Ignore .vscode
+.vscode
+
+# Ignore .agents
+.agents

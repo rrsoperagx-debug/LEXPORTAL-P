@@ -1,0 +1,86 @@
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend[39m
+
+[90mstdout[2m | tests/ai_benchmark/legal_consistency.test.ts[2m > [22m[2mAI Benchmark - Adherence to Lexportal Rules[2m > [22m[2mAI should include RODO clause and Penalty Cap in NDA templates
+[22m[39m--- TEST 1 RESPONSE ---
+Zastrzeżenie prawne: Niniejszy dokument jest wzorcem wygenerowanym przez system sztucznej inteligencji i ma charakter wyłącznie informacyjny. Nie stanowi on porady prawnej ani opinii prawnej w rozumieniu ustawy o radcach prawnych. Każda umowa powinna zostać zweryfikowana przez wykwalifikowanego prawnika pod kątem specyficznych potrzeb i ryzyk związanych z danym projektem. Korzystanie z poniższego wzoru odbywa się na wyłączną odpowiedzialność użytkownika. AI nie jest prawnikiem.
+
+UMOWA O POUFNOŚCI (NDA)
+
+Zawarta w dniu ... w ... pomiędzy:
+
+... z siedzibą w ... przy ulicy ... wpisaną do rejestru przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS ... NIP ... reprezentowaną przez ... zwaną dalej Zleceniodawcą,
+
+a
+
+... prowadzącym działalność gospodarczą pod firmą ... z siedzibą w ... przy ulicy ... wpisanym do Centralnej Ewidencji i Informacji o Działalności Gospodarczej pod numerem NIP ... zwanym dalej Zleceniobiorcą.
+
+Zleceniodawca i Zleceniobiorca zwani są dalej łącznie Stronami, a każdy z osobna Stroną.
+
+Paragraf 1. Przedmiot Umowy
+Celem niniejszej Umowy jest zapewnienie ochrony Informacji Poufnych przekazywanych przez Zleceniodawcę Zleceniobiorcy w związku z realizacją usług programistycznych, w tym wytwarzaniem kodu źródłowego, projektowaniem architektury systemów oraz utrzymaniem infrastruktury IT.
+
+Paragraf 2. Definicja Informacji Poufnych
+Informacje Poufne oznaczają wszelkie informacje o charakterze technicznym, technologicznym, handlowym, operacyjnym, finansowym, prawnym lub organizacyjnym dotyczące Zleceniodawcy, przekazane Zleceniobiorcy w dowolnej formie. W szczególności za Informacje Poufne uznaje się: kod źródłowy, algorytmy, bazy danych, specyfikacje techniczne, klucze API, dane uwierzytelniające, plany rozwoju oprogramowania oraz dane osobowe przetwarzane w systemach Zleceniodawcy.
+
+Paragraf 3. Zobowiązania Zleceniobiorcy
+Zleceniobiorca zobowiązuje się do zachowania Informacji Poufnych w ścisłej tajemnicy i ochrony ich przed dostępem osób nieuprawnionych. Zleceniobiorca może wykorzystywać Informacje Poufne wyłącznie w celu należytego wykonania usług na rzecz Zleceniodawcy. Zleceniobiorca nie może kopiować ani utrwalać Informacji Poufnych w celach innych niż realizacja obowiązków wynikających ze współpracy ze Zleceniodawcą.
+
+Paragraf 4. Wyłączenia z poufności
+Obowiązek zachowania poufności nie dotyczy informacji, które są powszechnie znane, zostały udostępnione Zleceniobiorcy przez osobę trzecią bez naruszenia prawa lub muszą zostać ujawnione na podstawie bezwzględnie obowiązujących przepisów prawa, wyroku sądu lub decyzji organu administracji, o czym Zleceniobiorca niezwłocznie zawiadomi Zleceniodawcę.
+
+Paragraf 5. Odpowiedzialność i Ograniczenie Roszczeń (Liability Cap)
+Zleceniobiorca ponosi odpowiedzialność za szkodę wyrządzoną Zleceniodawcy na skutek naruszenia postanowień niniejszej Umowy. Strony zgodnie ustalają, że całkowita i łączna odpowiedzialność odszkodowawcza Zleceniobiorcy z tytułu naruszenia wszelkich obowiązków wynikających z niniejszej Umowy, w tym z tytułu kar umownych, jest ograniczona do wysokości całkowitego wynagrodzenia netto należnego Zleceniobiorcy na podstawie umowy głównej o świadczenie usług programistycznych. Ograniczenie to nie znajduje zastosowania w przypadku szkód wyrządzonych z winy umyślnej.
+
+Paragraf 6. Klauzula Informacyjna RODO
+Zgodnie z art. 13 ust. 1 i 2 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. (RODO) informujemy, że Administratorem danych osobowych Stron jest każda ze Stron w zakresie danych uzyskanych od drugiej Strony. Dane osobowe osób reprezentujących Strony oraz osób wyznaczonych do kontaktu przetwarzane są w celu zawarcia i realizacji niniejszej Umowy (art. 6 ust. 1 lit. b RODO) oraz w celu realizacji prawnie uzasadnionych interesów administratora, takich jak ochrona tajemnicy przedsiębiorstwa i dochodzenie roszczeń (art. 6 ust. 1 lit. f RODO). Dane będą przechowywane przez okres obowiązywania Umowy oraz przez okres przedawnienia roszczeń wynikający z przepisów prawa. Każdej osobie, której dane dotyczą, przysługuje prawo dostępu do treści swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, prawo do przenoszenia danych oraz prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych. Podanie danych jest dobrowolne, ale niezbędne do zawarcia Umowy.
+
+Paragraf 7. Czas obowiązywania Umowy
+Niniejsza Umowa wchodzi w życie z dniem jej podpisania i obowiązuje przez okres 5 lat po zakończeniu współpracy między Stronami, bez względu na podstawę jej zakończenia.
+
+Paragraf 8. Postanowienia końcowe
+Wszelkie zmiany niniejszej Umowy wymagają formy pisemnej pod rygorem nieważności. Spory wynikające z realizacji Umowy będą rozstrzygane przez sąd powszechny właściwy dla siedziby Zleceniodawcy. Umowę sporządzono w dwóch jednobrzmiących egzemplarzach, po jednym dla każdej ze Stron.
+
+Podpis Zleceniodawcy: ........................
+
+Podpis Zleceniobiorcy: ........................
+-----------------------
+
+[90mstdout[2m | tests/ai_benchmark/legal_consistency.test.ts[2m > [22m[2mAI Benchmark - Adherence to Lexportal Rules[2m > [22m[2mAI should suggest RBAC middleware for sensitive endpoints
+[22m[39m--- TEST 3 EVALUATION ---
+{
+  "score": 90,
+  "missing_elements": [
+    "pełna implementacja logiki autoryzacji w get_current_active_superuser",
+    "interakcja z bazą danych"
+  ],
+  "is_tech_compliant": true,
+  "legal_risk": "low",
+  "comment": "Kod spełnia większość wymagań, ale brakuje pełnej implementacji logiki autoryzacji i interakcji z bazą danych."
+}
+
+ [31m❯[39m tests/ai_benchmark/legal_consistency.test.ts [2m([22m[2m3 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 59861[2mms[22m[39m
+     [33m[2m✓[22m[39m AI should include RODO clause and Penalty Cap in NDA templates [33m 17468[2mms[22m[39m
+[31m     [31m×[31m AI should generate React components using Tailwind and TypeScript[39m[33m 16487[2mms[22m[39m
+     [33m[2m✓[22m[39m AI should suggest RBAC middleware for sensitive endpoints [33m 25904[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m tests/ai_benchmark/legal_consistency.test.ts[2m > [22mAI Benchmark - Adherence to Lexportal Rules[2m > [22mAI should generate React components using Tailwind and TypeScript
+[31m[1mAssertionError[22m: expected 90 to be greater than 90[39m
+[36m [2m❯[22m tests/ai_benchmark/legal_consistency.test.ts:[2m42:30[22m[39m
+    [90m 40| [39m    ])[33m;[39m
+    [90m 41| [39m
+    [90m 42| [39m    [34mexpect[39m(evaluation[33m.[39mscore)[33m.[39m[34mtoBeGreaterThan[39m([34m90[39m)[33m;[39m
+    [90m   | [39m                             [31m^[39m
+    [90m 43| [39m    [34mexpect[39m(evaluation[33m.[39mis_tech_compliant)[33m.[39m[34mtoBe[39m([35mtrue[39m)[33m;[39m
+    [90m 44| [39m  })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m2 passed[39m[22m[90m (3)[39m
+[2m   Start at [22m 07:22:21
+[2m   Duration [22m 59.99s[2m (transform 35ms, setup 0ms, import 47ms, tests 59.86s, environment 0ms)[22m
+

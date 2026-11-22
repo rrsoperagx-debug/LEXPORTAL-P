@@ -1,0 +1,19 @@
+components/__tests__/Footer.test.tsx(2,10): error TS2305: Module '"@testing-library/react"' has no exported member 'screen'.
+components/__tests__/Navbar.test.tsx(2,10): error TS2305: Module '"@testing-library/react"' has no exported member 'screen'.
+pages/Cases.tsx(61,16): error TS2345: Argument of type 'Record<string, unknown>[]' is not assignable to parameter of type 'SetStateAction<Case[]>'.
+  Type 'Record<string, unknown>[]' is not assignable to type 'Case[]'.
+    Type 'Record<string, unknown>' is missing the following properties from type 'Case': id, title, description, status, created_at
+pages/ClientDashboard.tsx(467,20): error TS2322: Type 'CalendarEvent | { id: unknown; }' is not assignable to type 'CalendarEvent'.
+  Type '{ id: unknown; }' is missing the following properties from type 'CalendarEvent': title, date, type
+pages/ClientDashboard.tsx(467,45): error TS2322: Type 'unknown' is not assignable to type 'number'.
+pages/ClientDashboard.tsx(544,18): error TS2345: Argument of type 'Record<string, unknown>[]' is not assignable to parameter of type 'SetStateAction<Case[]>'.
+  Type 'Record<string, unknown>[]' is not assignable to type 'Case[]'.
+    Type 'Record<string, unknown>' is missing the following properties from type 'Case': id, title, category, status, and 3 more.
+pages/ClientDashboard.tsx(2573,11): error TS2322: Type 'unknown' is not assignable to type 'string'.
+pages/ClientDashboard.tsx(2574,11): error TS2322: Type 'unknown' is not assignable to type 'string'.
+pages/SalesDashboard.tsx(53,26): error TS2339: Property 'data' does not exist on type 'unknown'.
+pages/__tests__/ClientDashboard.integration.test.tsx(2,10): error TS2305: Module '"@testing-library/react"' has no exported member 'screen'.
+pages/__tests__/ClientDashboard.integration.test.tsx(2,18): error TS2305: Module '"@testing-library/react"' has no exported member 'fireEvent'.
+pages/__tests__/ClientDashboard.integration.test.tsx(2,34): error TS2305: Module '"@testing-library/react"' has no exported member 'waitFor'.
+pages/__tests__/ClientDashboard.integration.test.tsx(2,43): error TS2305: Module '"@testing-library/react"' has no exported member 'within'.
+services/__tests__/api.test.ts(150,26): error TS2339: Property 'status' does not exist on type 'unknown'.

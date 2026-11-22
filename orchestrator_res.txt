@@ -1,0 +1,61 @@
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend[39m
+
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts
+[22m[39m[Benchmark] Login SUCCESSFUL for jan.kowalski@example.com
+
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts[2m > [22m[2mAI Orchestrator — Tier Benchmarks[2m > [22m[2mTIER_1 (Gemini) — Short query response time and structure
+[22m[39m[TIER_1] Status: 200, Time: 27342ms
+[TIER_1] ✅ PASSED in 27342ms — 5 risks, 7 recommendations
+
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts[2m > [22m[2mAI Orchestrator — Tier Benchmarks[2m > [22m[2mTIER_2 (Cerebras) — Medium query response time and structure
+[22m[39m[TIER_2] Status: 200, Time: 26035ms
+[TIER_2] ✅ PASSED in 26035ms
+
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts[2m > [22m[2mAI Orchestrator — Tier Benchmarks[2m > [22m[2mTIER_3 (Mistral) — Long query response time and structure
+[22m[39m[TIER_3] Status: 500, Time: 30048ms
+
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts[2m > [22m[2mAI Orchestrator — Tier Benchmarks[2m > [22m[2mSchema consistency — all tiers must return identical JSON shape
+[22m[39m[Schema/TIER_1] ✅ All required fields present
+
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts[2m > [22m[2mAI Orchestrator — Tier Benchmarks[2m > [22m[2mSchema consistency — all tiers must return identical JSON shape
+[22m[39m[Schema/TIER_3] ✅ All required fields present
+
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts[2m > [22m[2mAI Orchestrator — Tier Benchmarks[2m > [22m[2mRate limiting — 6th request in burst should return 429
+[22m[39m[Rate Limit] Status codes: [ [33m200[39m, [33m200[39m, [33m200[39m, [33m429[39m, [33m429[39m, [33m429[39m ]
+[Rate Limit] ✅ Rate limiting is working correctly
+
+ [31m❯[39m tests/ai_benchmark/orchestrator_tiers.test.ts [2m([22m[2m5 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 168103[2mms[22m[39m
+     [33m[2m✓[22m[39m TIER_1 (Gemini) — Short query response time and structure [33m 27345[2mms[22m[39m
+     [33m[2m✓[22m[39m TIER_2 (Cerebras) — Medium query response time and structure [33m 26036[2mms[22m[39m
+[31m     [31m×[31m TIER_3 (Mistral) — Long query response time and structure[39m[33m 30053[2mms[22m[39m
+     [33m[2m✓[22m[39m Schema consistency — all tiers must return identical JSON shape [33m 56651[2mms[22m[39m
+     [33m[2m✓[22m[39m Rate limiting — 6th request in burst should return 429 [33m 27921[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m tests/ai_benchmark/orchestrator_tiers.test.ts[2m > [22mAI Orchestrator — Tier Benchmarks[2m > [22mTIER_3 (Mistral) — Long query response time and structure
+[31m[1mAssertionError[22m: expected 500 to be 200 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 200[39m
+[31m+ 500[39m
+
+[36m [2m❯[22m tests/ai_benchmark/orchestrator_tiers.test.ts:[2m174:24[22m[39m
+    [90m172| [39m        }
+    [90m173| [39m
+    [90m174| [39m        [34mexpect[39m(status)[33m.[39m[34mtoBe[39m([34m200[39m)[33m;[39m
+    [90m   | [39m                       [31m^[39m
+    [90m175| [39m        [34mexpect[39m(durationMs)[33m.[39m[34mtoBeLessThan[39m([33mSLA[39m[33m.[39m[33mTIER_3[39m)[33m;[39m
+    [90m176| [39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m4 passed[39m[22m[90m (5)[39m
+[2m   Start at [22m 07:53:10
+[2m   Duration [22m 168.22s[2m (transform 28ms, setup 0ms, import 36ms, tests 168.10s, environment 0ms)[22m
+

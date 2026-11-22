@@ -1,0 +1,171 @@
+$ vitest run --coverage
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90m/home/rr/PROJECTS/SUKCES/SOBOTA/17.02.2026_ToDo-SUKCES/frontend[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Happy Path[2m > [22m[2mshould make a request with correct headers
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Happy Path[2m > [22m[2mshould include authorization token if present
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Happy Path[2m > [22m[2mshould return empty object for 204 response
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Error Handling (Edge Cases)[2m > [22m[2mshould throw ApiError on 400 Bad Request
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Error Handling (Edge Cases)[2m > [22m[2mshould throw ApiError on 400 Bad Request
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Error Handling (Edge Cases)[2m > [22m[2mshould throw ApiError on 404 Not Found
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Error Handling (Edge Cases)[2m > [22m[2mshould throw ApiError on 500 Internal Server Error
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Error Handling (Edge Cases)[2m > [22m[2mshould throw "Network error" if fetch fails silently
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Error Handling (Edge Cases)[2m > [22m[2mshould handle complex error details (array)
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mapiCall - Error Handling (Edge Cases)[2m > [22m[2mshould handle error with status property
+[22m[39m[API CALL] Requesting final URL: /api/v1/test
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mauthApi[2m > [22m[2mregister should make POST request
+[22m[39m[API CALL] Requesting final URL: /api/v1/auth/register
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mauthApi[2m > [22m[2mgetMe should fetch user profile
+[22m[39m[API CALL] Requesting final URL: /api/v1/users/me
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mcasesApi[2m > [22m[2mlist should fetch cases
+[22m[39m[API CALL] Requesting final URL: /api/v1/cases/
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mcasesApi[2m > [22m[2mget should fetch single case
+[22m[39m[API CALL] Requesting final URL: /api/v1/cases/1
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mcasesApi[2m > [22m[2mcreate should POST case data
+[22m[39m[API CALL] Requesting final URL: /api/v1/cases/
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mmessagesApi[2m > [22m[2mlist should fetch messages
+[22m[39m[API CALL] Requesting final URL: /api/v1/messages/?include_archived=false
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mmessagesApi[2m > [22m[2mlist should support includeArchived parameter
+[22m[39m[API CALL] Requesting final URL: /api/v1/messages/?include_archived=true
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mmessagesApi[2m > [22m[2msend should POST message data
+[22m[39m[API CALL] Requesting final URL: /api/v1/messages/send
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mmessagesApi[2m > [22m[2mupdate should PATCH message
+[22m[39m[API CALL] Requesting final URL: /api/v1/messages/1
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mappointmentsApi[2m > [22m[2mlist should fetch appointments
+[22m[39m[API CALL] Requesting final URL: /api/v1/appointments/
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mappointmentsApi[2m > [22m[2mcreate should POST appointment
+[22m[39m[API CALL] Requesting final URL: /api/v1/appointments/
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mappointmentsApi[2m > [22m[2mupdate should PATCH appointment
+[22m[39m[API CALL] Requesting final URL: /api/v1/appointments/1
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mappointmentsApi[2m > [22m[2mdelete should DELETE appointment
+[22m[39m[API CALL] Requesting final URL: /api/v1/appointments/1
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mcontactApi[2m > [22m[2msend should POST contact form
+[22m[39m[API CALL] Requesting final URL: /api/v1/contact/
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2musersApi[2m > [22m[2mupdateProfile should PATCH user data
+[22m[39m[API CALL] Requesting final URL: /api/v1/users/me
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2musersApi[2m > [22m[2mchangePassword should POST password change
+[22m[39m[API CALL] Requesting final URL: /api/v1/users/change-password
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mnotificationsApi[2m > [22m[2mlist should fetch notifications
+[22m[39m[API CALL] Requesting final URL: /api/v1/notifications/
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mnotificationsApi[2m > [22m[2mmarkRead should POST to mark as read
+[22m[39m[API CALL] Requesting final URL: /api/v1/notifications/1/read
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2mauditApi[2m > [22m[2mgetLogs should fetch audit logs with pagination
+[22m[39m[API CALL] Requesting final URL: /api/v1/audit/logs?page=1&size=20
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2msettingsApi[2m > [22m[2mgetSettings should fetch user settings
+[22m[39m[API CALL] Requesting final URL: /api/v1/settings/
+
+[90mstdout[2m | services/__tests__/api.test.ts[2m > [22m[2mapi.ts[2m > [22m[2msettingsApi[2m > [22m[2mupdateSettings should PUT settings
+[22m[39m[API CALL] Requesting final URL: /api/v1/settings/
+
+ [32m✓[39m services/__tests__/api.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m context/__tests__/ThemeContext.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+[90mstdout[2m | services/ai/__tests__/AIOrchestrator.test.ts[2m > [22m[2mAIOrchestrator Tiered Selection[2m > [22m[2mshould select Gemini for short texts (Tier 1)
+[22m[39m[AI_ORCHESTRATOR] Attempting request via: Gemini
+
+[90mstdout[2m | services/ai/__tests__/AIOrchestrator.test.ts[2m > [22m[2mAIOrchestrator Tiered Selection[2m > [22m[2mshould select Gemini for short texts (Tier 1)
+[22m[39m[AUDIT_LOG] Content processed by Gemini. Length: 5 chars.
+
+[90mstdout[2m | services/ai/__tests__/AIOrchestrator.test.ts[2m > [22m[2mAIOrchestrator Tiered Selection[2m > [22m[2mshould select Cerebras for medium texts (Tier 2)
+[22m[39m[AI_ORCHESTRATOR] Attempting request via: Cerebras
+
+[90mstdout[2m | services/ai/__tests__/AIOrchestrator.test.ts[2m > [22m[2mAIOrchestrator Tiered Selection[2m > [22m[2mshould select Cerebras for medium texts (Tier 2)
+[22m[39m[AUDIT_LOG] Content processed by Cerebras. Length: 6 chars.
+
+[90mstdout[2m | services/ai/__tests__/AIOrchestrator.test.ts[2m > [22m[2mAIOrchestrator Tiered Selection[2m > [22m[2mshould failover to MistralAI if Tier 1 or 2 fails
+[22m[39m[AI_ORCHESTRATOR] Attempting request via: Gemini
+
+[90mstderr[2m | services/ai/__tests__/AIOrchestrator.test.ts[2m > [22m[2mAIOrchestrator Tiered Selection[2m > [22m[2mshould failover to MistralAI if Tier 1 or 2 fails
+[22m[39m[AI_ORCHESTRATOR] Provider Gemini failed. Trying next... Error: Gemini failed
+
+[90mstdout[2m | services/ai/__tests__/AIOrchestrator.test.ts[2m > [22m[2mAIOrchestrator Tiered Selection[2m > [22m[2mshould failover to MistralAI if Tier 1 or 2 fails
+[22m[39m[AI_ORCHESTRATOR] Attempting request via: MistralAI
+
+[90mstdout[2m | services/ai/__tests__/AIOrchestrator.test.ts[2m > [22m[2mAIOrchestrator Tiered Selection[2m > [22m[2mshould failover to MistralAI if Tier 1 or 2 fails
+[22m[39m[AUDIT_LOG] Content processed by MistralAI. Length: 7 chars.
+
+ [32m✓[39m services/ai/__tests__/AIOrchestrator.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m context/__tests__/AuthContext.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m components/__tests__/Footer.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 94[2mms[22m[39m
+ [32m✓[39m components/__tests__/Navbar.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 247[2mms[22m[39m
+ [31m❯[39m components/__tests__/DocumentAICenter.test.tsx [2m([22m[2m29 tests[22m[2m | [22m[31m29 failed[39m[2m)[22m[32m 289[2mms[22m[39m
+[31m       [31m×[31m should render the component with header[39m[32m 53[2mms[22m[39m
+[31m       [31m×[31m should render all three tab buttons[39m[32m 9[2mms[22m[39m
+[31m       [31m×[31m should render the process tab by default[39m[32m 9[2mms[22m[39m
+[31m       [31m×[31m should render with cases prop[39m[32m 9[2mms[22m[39m
+[31m       [31m×[31m should switch to Generator tab[39m[32m 10[2mms[22m[39m
+[31m       [31m×[31m should switch to Asystent tab[39m[32m 12[2mms[22m[39m
+[31m       [31m×[31m should switch back to Analiza Pism tab[39m[32m 9[2mms[22m[39m
+[31m       [31m×[31m should show word count[39m[32m 8[2mms[22m[39m
+[31m       [31m×[31m should enable Analizuj button when text is entered[39m[32m 7[2mms[22m[39m
+[31m       [31m×[31m should show Wyczyść button when text is entered[39m[32m 10[2mms[22m[39m
+[31m       [31m×[31m should clear text and results on Wyczyść click[39m[32m 8[2mms[22m[39m
+[31m       [31m×[31m should show empty state when no analysis results[39m[32m 9[2mms[22m[39m
+[31m       [31m×[31m should show history toggle button[39m[32m 10[2mms[22m[39m
+[31m       [31m×[31m should toggle history view[39m[32m 7[2mms[22m[39m
+[31m       [31m×[31m should show file upload button[39m[32m 8[2mms[22m[39m
+[31m       [31m×[31m should call fetch on analyze[39m[32m 6[2mms[22m[39m
+[31m       [31m×[31m should show AI generation card[39m[32m 8[2mms[22m[39m
+[31m       [31m×[31m should show template search field[39m[32m 6[2mms[22m[39m
+[31m       [31m×[31m should disable AI generate button when no description[39m[32m 7[2mms[22m[39m
+[31m       [31m×[31m should enable AI generate button with description[39m[32m 9[2mms[22m[39m
+[31m       [31m×[31m should show empty document preview state[39m[32m 10[2mms[22m[39m
+[31m       [31m×[31m should show welcome message[39m[32m 8[2mms[22m[39m
+[31m       [31m×[31m should show suggestion buttons[39m[32m 9[2mms[22m[39m
+[31m       [31m×[31m should fill input on suggestion click[39m[32m 8[2mms[22m[39m
+[31m       [31m×[31m should show case context selector when cases provided[39m[32m 7[2mms[22m[39m
+[31m       [31m×[31m should not show case context selector without cases[39m[32m 7[2mms[22m[39m
+[31m       [31m×[31m should show AI disclaimer[39m[32m 11[2mms[22m[39m
+[31m       [31m×[31m should disable send button when input is empty[39m[32m 7[2mms[22m[39m
+[31m       [31m×[31m should send chat message on Enter[39m[32m 7[2mms[22m[39m
+ [32m✓[39m pages/__tests__/ClientDashboard.integration.test.tsx [2m([22m[2m12 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[33m 1349[2mms[22m[39m
+     [33m[2m✓[22m[39m should navigate between views in the dashboard [33m 332[2mms[22m[39m
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts
+[22m[39m[Benchmark] Login SUCCESSFUL for jan.kowalski@example.com
+
+[90mstdout[2m | tests/ai_benchmark/orchestrator_tiers.test.ts[2m > [22m[2mAI Orchestrator — Tier Benchmarks[2m > [22m[2mTIER_2 (Cerebras) — Medium query response time and structure
+[22m[39m[TIER_1] Status: 200, Time: 91651ms
+
+ [31m❯[39m tests/ai_benchmark/legal_consistency.test.ts [2m([22m[2m3 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[33m 100994[2mms[22m[39m
+[31m     [31m×[31m AI should include RODO clause and Penalty Cap in NDA templates[39m[33m 9442[2mms[22m[39m
+[31m     [31m×[31m AI should generate React components using Tailwind and TypeScript[39m[33m 11774[2mms[22m[39m
+[31m     [31m×[31m AI should suggest RBAC middleware for sensitive endpoints[39m[33m 79773[2mms[22m[39m
+error: script "coverage" was terminated by signal SIGHUP (Terminal hung up)
